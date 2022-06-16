@@ -6,7 +6,7 @@
 #    By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/05 18:19:31 by mouarsas          #+#    #+#              #
-#    Updated: 2022/06/09 03:16:21 by mouarsas         ###   ########.fr        #
+#    Updated: 2022/06/14 01:55:42 by mouarsas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,4 +26,29 @@ SRC = window.c \
 	  ft_printf/ft_putnbr.c \
 	  ft_printf/ft_putstr.c \
 
-SRC_BONUS = 
+OBJ = ${SRC:.c=.o}
+
+CC = cc
+
+CFLAGS = -Wall -Wextra -Werror
+
+MLX = -lmlx -framework OpenGL -framework AppKit
+
+all : $(NAME)
+
+$(NAME): $(OBJ)
+	@$(CC) $(CFLAGS) $(MLX) $(OBJ) ft_printf/libftprintf.a -o $(NAME)
+
+%.o:%.c so_long.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+
+
+
+clean :
+		@rm -rf $(OBJ)
+
+fclean : clean
+		@rm -rf $(NAME)
+
+re : fclean all bonus

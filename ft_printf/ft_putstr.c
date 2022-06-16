@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   window.c                                           :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 18:21:07 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/16 02:04:49 by mouarsas         ###   ########.fr       */
+/*   Created: 2022/06/10 22:04:15 by mouarsas          #+#    #+#             */
+/*   Updated: 2022/06/11 04:36:05 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
-#include "get_next_line/get_next_line.h"
-#include "ft_printf/ft_printf.h"
+#include "ft_printf.h"
 
-void	mlx_function(t_data data)
+void	ft_putstr(char *str, int *cp)
 {
-	init(&data);
-	check_rectangle(data);
-	check_walls(data);
-	if (!check_content(&data, 0, 0))
+	int	i;
+
+	if (!str)
 	{
-		ft_printf("Error\nProblem in the contents of the map");
-		exit (0);
+		ft_putstr("(null)", cp)
+		return ;
 	}
-	open_window(&data);
-	mlx_hook(data.mlx_larg);
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i], cp);
+		i++;
+	}
 }

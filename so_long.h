@@ -6,7 +6,7 @@
 /*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 18:20:48 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/09 02:45:27 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/16 02:06:05 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,25 @@
 # define A 0
 # define S 1
 # define D 2
-# define w 13
+# define W 13
 # define ESC 53
 
 typedef struct s_data
 {
-	int		len;
+	int		hauteur;
+	int		larg;
+	char	**stock;
+	int		player;
+	int		p_x;
+	int		p_y;
+	int		collectible;
+	int		space;
+	int		wall;
+	int		exit;
+	void	*empty;
+	void	*mlx;
+	void	*mlx_larg;
+	
 	
 }		t_data;
 
@@ -36,7 +49,7 @@ void	open_window(t_data *data);
 void	draw(t_data *data);
 int		check_content(t_data *d, int i, int j);
 void	init(t_data *d);
-size_t	ft_strlen(const char *s);
+size_t	ft_strlen(char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_free(t_data *data);
 int		destroy_window(t_data *data);

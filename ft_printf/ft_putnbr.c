@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   window.c                                           :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 18:21:07 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/16 02:04:49 by mouarsas         ###   ########.fr       */
+/*   Created: 2022/06/10 21:54:30 by mouarsas          #+#    #+#             */
+/*   Updated: 2022/06/10 22:03:26 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
-#include "get_next_line/get_next_line.h"
-#include "ft_printf/ft_printf.h"
+#include "ft_printf.h"
 
-void	mlx_function(t_data data)
+void	ft_putnbr(int n, int *cp)
 {
-	init(&data);
-	check_rectangle(data);
-	check_walls(data);
-	if (!check_content(&data, 0, 0))
+	if (n == -2147483648)
 	{
-		ft_printf("Error\nProblem in the contents of the map");
-		exit (0);
+		write(1, "-2147483648", 11);
+		*cp = *cp + 11;
+		return ;
 	}
-	open_window(&data);
-	mlx_hook(data.mlx_larg);
+	else if (n < 0)
+	{
+		ft_putchar('-', cp);
+		n = -n;
+	}
+	if (n < 10)
+	{
+		ft_putchar(n + '0', cp)
+	}
+	else
+	{
+		ft_putnbr(n / 10, cp);
+		ft_putchar(n % 10 + 48, cp);
+	}
 }

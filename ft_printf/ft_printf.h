@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   window.c                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 18:21:07 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/16 02:04:49 by mouarsas         ###   ########.fr       */
+/*   Created: 2022/06/10 20:55:44 by mouarsas          #+#    #+#             */
+/*   Updated: 2022/06/13 23:00:58 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
-#include "get_next_line/get_next_line.h"
-#include "ft_printf/ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-void	mlx_function(t_data data)
-{
-	init(&data);
-	check_rectangle(data);
-	check_walls(data);
-	if (!check_content(&data, 0, 0))
-	{
-		ft_printf("Error\nProblem in the contents of the map");
-		exit (0);
-	}
-	open_window(&data);
-	mlx_hook(data.mlx_larg);
-}
+# include<unistd.h>
+# include<stdarg.h>
+
+void	ft_putchar(char c, int *cp);
+void	ft_putnbr(int n, int *cp);
+int		ft_printf(const char *tmp, ...);
+void	ft_putnbr_unsigned(unsigned int n, int *cp);
+void	ft_hexa(unsigned int n, const char *base, int *cp);
+void	ft_putstr(char *str, int *cp);
+void	ft_pionter(unsigned long n, const char *base, int *cp);
+
+#endif
