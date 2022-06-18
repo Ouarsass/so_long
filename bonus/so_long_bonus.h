@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 18:20:48 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/17 22:59:32 by mouarsas         ###   ########.fr       */
+/*   Created: 2022/06/17 23:29:02 by mouarsas          #+#    #+#             */
+/*   Updated: 2022/06/17 23:57:52 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef "SO_LONG_BONUS.H"
+# define "SO_LONG_BONUS.H"
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -35,7 +35,7 @@ typedef struct s_data
 	int		space;
 	int		wall;
 	int		exit;
-	void	*empty;
+	void	*empty;.
 	void	*mlx;
 	void	*mlx_win;
 	void	*champignon;

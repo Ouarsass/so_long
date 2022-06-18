@@ -6,9 +6,11 @@
 /*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 02:58:03 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/09 03:01:09 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/17 23:13:08 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "get_next_line.h"
 
 char	*ft_lecture(int fd, char *buffers)
 {

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_map.c                                        :+:      :+:    :+:   */
+/*   check_map_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 23:48:45 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/17 23:10:37 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/17 23:48:43 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include "get_next_line/get_next_line.h"
 #include "ft_printf/ft_printf.h"
 

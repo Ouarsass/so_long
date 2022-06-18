@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   window.c                                           :+:      :+:    :+:   */
+/*   window_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 18:21:07 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/17 23:06:45 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/17 23:34:44 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include "get_next_line/get_next_line.h"
 #include "ft_printf/ft_printf.h"
 
