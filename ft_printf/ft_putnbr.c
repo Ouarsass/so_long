@@ -27,7 +27,7 @@ void	ft_putnbr(int n, int *cp)
 	}
 	if (n < 10)
 	{
-		ft_putchar(n + '0', cp)
+		ft_putchar(n + '0', cp);
 	}
 	else
 	{

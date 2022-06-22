@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(char *s)
+size_t	ft_strleen(char *s)
 {
 	size_t	i;
 
@@ -53,8 +53,8 @@ char	*ft_strjoin(char *s1, char *s2)
 			return (0);
 		s1[0] = '\0';
 	}
-	l1 = ft_strlen(s1);
-	l2 = ft_strlen(s2);
+	l1 = ft_strleen(s1);
+	l2 = ft_strleen(s2);
 	result = (char *)malloc(l1 + l2 + 1);
 	if (result != NULL)
 	{

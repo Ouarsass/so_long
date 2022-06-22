@@ -22,6 +22,6 @@ int		ft_printf(const char *tmp, ...);
 void	ft_putnbr_unsigned(unsigned int n, int *cp);
 void	ft_hexa(unsigned int n, const char *base, int *cp);
 void	ft_putstr(char *str, int *cp);
-void	ft_pionter(unsigned long n, const char *base, int *cp);
+void	ft_pointer(unsigned long n, const char *base, int *cp);
 
 #endif

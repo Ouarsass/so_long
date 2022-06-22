@@ -18,11 +18,11 @@ SRC = window.c \
 	  check_map.c \
 	  get_next_line/get_next_line_utils.c \
 	  get_next_line/get_next_line.c \
-	  ft_printf/hexa.c \
+	  ft_printf/ft_hexa.c \
 	  ft_printf/ft_pointer.c \
 	  ft_printf/ft_printf.c \
 	  ft_printf/ft_putchar.c \
-	  ft_printf/ft_putnbr_umsigned.c \
+	  ft_printf/ft_putnbr_unsigned.c \
 	  ft_printf/ft_putnbr.c \
 	  ft_printf/ft_putstr.c \
 

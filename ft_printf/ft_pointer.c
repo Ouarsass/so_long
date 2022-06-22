@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-void	ft_pionter(unsigned long n, const char *base, int *cp)
+void	ft_pointer(unsigned long n, const char *base, int *cp)
 {
 	if (n >= 16)
-		ft_pionter(n / 16, base, cp)
+		ft_pointer(n / 16, base, cp);
 	ft_putchar(base[n % 16], cp);
 }

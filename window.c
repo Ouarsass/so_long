@@ -78,21 +78,21 @@ void	draw(t_data *data)
 	}
 }
 
-void	open_windows(t_data *data)
+void	open_window(t_data *data)
 {
 	data->mlx = mlx_init();
 	data->mlx_win = mlx_new_window(data->mlx, 64 * data->larg, \
-		64 * data->larg, "so_long");
+		64 * data->hauteur, "so_long");
 	data->door = mlx_xpm_file_to_image(data->mlx, \
-		"image/door.xpm", &data->a, &data->b);
+		"image/door.xpm", &data->img_hauteur, &data->img_largeur);
 	data->champignon = mlx_xpm_file_to_image(data->mlx, \
-		"image/champignon.xpm", &data->a, &data->b);
+		"image/champignon.xpm", &data->img_hauteur, &data->img_largeur);
 	data->mario = mlx_xpm_file_to_image(data->mlx, \
-		"image/mario.xpm", &data->a, &data->b);
+		"image/mario.xpm", &data->img_hauteur, &data->img_largeur);
 	data->walls = mlx_xpm_file_to_image(data->mlx, \
-		"image/walls.xpm", &data->a, &data->b);
+		"image/walls.xpm", &data->img_hauteur, &data->img_largeur);
 	data->empty = mlx_xpm_file_to_image(data->mlx, \
-		"image/empty", &data->a, &data->b);
+		"image/empty.xpm", &data->img_hauteur, &data->img_largeur);
 	if (!data->walls || !data->mario || !data->champignon || !data->door \
 		|| !data->empty)
 		{

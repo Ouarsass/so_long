@@ -75,7 +75,7 @@ void	check(int fd, t_data data, char **av, int i)
 		data.stock[i++] = get_next_line(fd);
 	close (fd);
 	data.larg = ft_strlen(data.stock[0]) - 1;
-	mlx_ft(data);
+	mlx_function(data);
 }
 
 int	main(int ac, char **av)

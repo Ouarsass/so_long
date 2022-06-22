@@ -72,7 +72,7 @@ char	*rest(char *buffers)
 		free (buffers);
 		return (0);
 	}
-	len = ft_strlen(buffers) - i;
+	len = ft_strleen(buffers) - i;
 	rest = (char *)malloc(sizeof (char) * len + 1);
 	if (!rest)
 		return (0);

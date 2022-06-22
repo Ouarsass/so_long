@@ -42,10 +42,9 @@ typedef struct s_data
 	void	*mario;
 	void	*walls;
 	void	*door;
-	int		a;
-	int		b;
+	int		img_hauteur;
+	int		img_largeur;
 	int		moves;
-	
 }		t_data;
 
 int		check_ext(char *map);
@@ -60,5 +59,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_free(t_data *data);
 int		destroy_window(t_data *data);
 int		key_hook(int key_code, t_data *data);
-void	mlx_ft(t_data data);
+void	mlx_function(t_data data);
 #endif

@@ -24,7 +24,7 @@
 
 char	*ft_lecture(int fd, char *buffers);
 char	*ft_strchr(char *s, int c);
-size_t	ft_strlen(char *s);
+size_t	ft_strleen(char *s);
 char	*ft_strjoin(char *s1, char *s2);
 void	*ft_memcpy(void *dst, void *src, size_t n);
 char	*lire_ligne(char *buffers);
