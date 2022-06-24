@@ -14,6 +14,24 @@
 #include "get_next_line/get_next_line.h"
 #include "ft_printf/ft_printf.h"
 
+int	update(t_data *data)
+{
+	data->count++;
+	if (data->count <= 90)
+	{
+		if (data->count >= 0)
+			data->enemy = mlx_xpm_file_to_image(data->mlx,
+			"bonus/image/enemy.xpm", &data->img_largeur, &data->img_hauteur);
+		if (data->count >= 50)
+			data->enemy = mlx_xpm_file_to_image(data->mlx,
+			"bonus/image/enemy1.xpm", &data->img_largeur, &data->img_hauteur);
+	}
+	else
+		data->count = 0;
+	draw(data);
+	return (0);
+}
+
 void	mlx_function(t_data data)
 {
 	init(&data);
@@ -25,6 +43,8 @@ void	mlx_function(t_data data)
 		exit (0);
 	}
 	open_window(&data);
+	data.count = 0;
+	mlx_loop_hook(data.mlx, &update, &data);
 	mlx_hook(data.mlx_win, 17, 0, destroy_window, &data);
 	mlx_hook(data.mlx_win, 2, 0, key_hook, &data);
 	mlx_loop(data.mlx);
@@ -71,6 +91,8 @@ void	draw(t_data *data)
 					put_image(data->champignon, i, j, data);
 				else if (data->stock[i][j] == 'E')
 					put_image(data->door, i, j, data);
+				else if(data->stock[i][j] == 'I')
+					put_image(data->enemy, i, j, data);
 			}
 			j++;
 		}
@@ -78,21 +100,23 @@ void	draw(t_data *data)
 	}
 }
 
-void	open_windows(t_data *data)
+void	open_window(t_data *data)
 {
 	data->mlx = mlx_init();
 	data->mlx_win = mlx_new_window(data->mlx, 64 * data->larg, \
-		64 * data->larg, "so_long");
+		64 * data->hauteur, "so_long");
 	data->door = mlx_xpm_file_to_image(data->mlx, \
-		"image/door.xpm", &data->a, &data->b);
+		"bonus/image/door.xpm", &data->img_hauteur, &data->img_largeur);
 	data->champignon = mlx_xpm_file_to_image(data->mlx, \
-		"image/champignon.xpm", &data->a, &data->b);
+		"bonus/image/champignon.xpm", &data->img_hauteur, &data->img_largeur);
 	data->mario = mlx_xpm_file_to_image(data->mlx, \
-		"image/mario.xpm", &data->a, &data->b);
+		"bonus/image/mario.xpm", &data->img_hauteur, &data->img_largeur);
 	data->walls = mlx_xpm_file_to_image(data->mlx, \
-		"image/walls.xpm", &data->a, &data->b);
+		"bonus/image/walls.xpm", &data->img_hauteur, &data->img_largeur);
 	data->empty = mlx_xpm_file_to_image(data->mlx, \
-		"image/empty", &data->a, &data->b);
+		"bonus/image/empty.xpm", &data->img_hauteur, &data->img_largeur);
+	data->enemy = mlx_xpm_file_to_image(data->mlx, \
+		"bonus/image/enemy.xpm", &data->img_hauteur, &data->img_largeur);
 	if (!data->walls || !data->mario || !data->champignon || !data->door \
 		|| !data->empty)
 		{

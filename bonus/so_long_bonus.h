@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef "SO_LONG_BONUS.H"
-# define "SO_LONG_BONUS.H"
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -35,17 +35,18 @@ typedef struct s_data
 	int		space;
 	int		wall;
 	int		exit;
-	void	*empty;.
+	void	*empty;
 	void	*mlx;
 	void	*mlx_win;
 	void	*champignon;
 	void	*mario;
 	void	*walls;
 	void	*door;
-	int		a;
-	int		b;
+	void	*enemy;
+	int		img_hauteur;
+	int		img_largeur;
 	int		moves;
-	
+	int		count;
 }		t_data;
 
 int		check_ext(char *map);
@@ -60,5 +61,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_free(t_data *data);
 int		destroy_window(t_data *data);
 int		key_hook(int key_code, t_data *data);
-void	mlx_ft(t_data data);
+void	mlx_function(t_data data);
 #endif

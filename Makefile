@@ -12,6 +12,8 @@
 
 NAME = so_long
 
+NAME_BONUS = so_long_bonus
+
 SRC = window.c \
 	  so_long.c \
 	  play.c \
@@ -59,9 +61,8 @@ $(NAME): $(OBJ)
 bonus: $(OBJ_BONUS)
 	@$(CC) $(CFLAGS) $(OBJ_BONUS) $(MLX) -o $(NAME)
 clean :
-		@rm -rf $(OBJ)
-
+		@rm -rf $(OBJ) $(OBJ_BONUS)
 fclean : clean
-		@rm -rf $(NAME)
+		@rm -rf $(NAME) $(NAME_BONUS)
 
 re : fclean all bonus

@@ -41,7 +41,7 @@ void	check_rectangle(t_data data)
 		if (i == data.hauteur - 1)
 			n = ft_strlen(data.stock[i]);
 		else
-			n = ft_strlen(data.stock[i]);
+			n = ft_strlen(data.stock[i]) - 1;
 		if (data.larg != n)
 		{
 			ft_printf("Error\ndidn't read the map");
@@ -84,6 +84,8 @@ void	help(t_data *d, int i, int j)
 		d->empty++;
 	else if (d->stock[i][j] == '1')
 		d->wall++;
+	else if (d->stock[i][j] == 'I')
+		;
 	else
 	{
 		ft_printf("Error : undefined character");
@@ -91,9 +93,9 @@ void	help(t_data *d, int i, int j)
 	}
 }
 
-int	chaeck_content(t_data *d, int i, int j)
+int	check_content(t_data *d, int i, int j)
 {
-	while (i < d->larg)
+	while (i < d->hauteur)
 	{
 		j = 0;
 		while (j < d->larg)

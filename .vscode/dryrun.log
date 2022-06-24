@@ -1,13 +1,13 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/mouarsas/Desktop/so_long'
- 
 cc -Wall -Wextra -Werror -c window.c -o window.o
 cc -Wall -Wextra -Werror -c so_long.c -o so_long.o
 cc -Wall -Wextra -Werror -c play.c -o play.o
 cc -Wall -Wextra -Werror -c check_map.c -o check_map.o
-cc -Wall -Wextra -Werror -c get_next_line/get_next_line_utils.c -o get_next_line/get_next_line_utils.o
  
+cc -Wall -Wextra -Werror -c get_next_line/get_next_line_utils.c -o get_next_line/get_next_line_utils.o
 cc -Wall -Wextra -Werror -c get_next_line/get_next_line.c -o get_next_line/get_next_line.o
+ 
 cc -Wall -Wextra -Werror -c ft_printf/ft_hexa.c -o ft_printf/ft_hexa.o
 cc -Wall -Wextra -Werror -c ft_printf/ft_pointer.c -o ft_printf/ft_pointer.o
 cc -Wall -Wextra -Werror -c ft_printf/ft_printf.c -o ft_printf/ft_printf.o
