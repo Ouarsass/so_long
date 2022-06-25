@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+         #
+#    By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/05 18:19:31 by mouarsas          #+#    #+#              #
-#    Updated: 2022/06/17 23:45:22 by mouarsas         ###   ########.fr        #
+#    Updated: 2022/06/25 02:53:46 by mouarsas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRC_BONUS = bonus/window_bonus.c \
 	  		bonus/ft_printf/ft_putnbr_unsigned.c \
 	  		bonus/ft_printf/ft_putnbr.c \
 	  		bonus/ft_printf/ft_putstr.c \
+			bonus/ft_free.c\
 
 OBJ = ${SRC:.c=.o}
 

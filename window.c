@@ -95,9 +95,9 @@ void	open_window(t_data *data)
 		"image/empty.xpm", &data->img_hauteur, &data->img_largeur);
 	if (!data->walls || !data->mario || !data->champignon || !data->door \
 		|| !data->empty)
-		{
-			ft_printf("Error\npicture problem");
-			exit(0);
-		}
-		draw(data);
+	{
+		ft_printf("Error\npicture problem");
+		exit(0);
+	}
+	draw(data);
 }

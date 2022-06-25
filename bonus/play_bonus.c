@@ -22,6 +22,17 @@ int	destroy_window(t_data *data)
 	return (0);
 }
 
+void	ft_exit(t_data *data, int i)
+{
+	if (i == 0)
+		ft_printf("You win");
+	if (i == 1)
+		ft_printf("Game over");
+	free (data->stock);
+	mlx_destroy_window(data->mlx, data->mlx_win);
+	exit(0);
+}
+
 void	player_moves(t_data *data, int i, int j)
 {
 	if (data->stock[data->p_x + i][data->p_y + j] != '1')
@@ -30,22 +41,19 @@ void	player_moves(t_data *data, int i, int j)
 			data->collectible--;
 		else if (data->stock[data->p_x + i][data->p_y + j] == 'E' \
 				&& data->collectible == 0)
-		{
-			free (data->stock);
-			ft_printf("You win!\n");
-			mlx_destroy_window(data->mlx, data->mlx_win);
-			exit(EXIT_SUCCESS);
-		}
+			ft_exit(data, 0);
 		else if (data->stock[data->p_x + i][data->p_y + j] == 'E' \
 				&& data->collectible != 0)
 			return ;
+		else if (data->stock[data->p_x + i][data->p_y + j] == 'I')
+			ft_exit(data, 1);
 		data->moves++;
-		data->stock[data->p_x +i][data->p_y + j] = 'P';
+		data->stock[data->p_x + i][data->p_y + j] = 'P';
 		data->stock[data->p_x][data->p_y] = '0';
 		data->p_x += i;
 		data->p_y += j;
 		ft_printf("Moves ; %d\n", data->moves);
-		draw(data);
+		draw(data, 0, 0);
 	}
 }
 

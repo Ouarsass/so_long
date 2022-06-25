@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   window_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 18:21:07 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/17 23:34:44 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/25 02:54:08 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,15 @@ int	update(t_data *data)
 	if (data->count <= 90)
 	{
 		if (data->count >= 0)
-			data->enemy = mlx_xpm_file_to_image(data->mlx,
+			data->enemy = mlx_xpm_file_to_image(data->mlx, \
 			"bonus/image/enemy.xpm", &data->img_largeur, &data->img_hauteur);
 		if (data->count >= 50)
-			data->enemy = mlx_xpm_file_to_image(data->mlx,
+			data->enemy = mlx_xpm_file_to_image(data->mlx, \
 			"bonus/image/enemy1.xpm", &data->img_largeur, &data->img_hauteur);
 	}
 	else
 		data->count = 0;
-	draw(data);
+	draw(data, 0, 0);
 	return (0);
 }
 
@@ -50,31 +50,14 @@ void	mlx_function(t_data data)
 	mlx_loop(data.mlx);
 }
 
-void	ft_free(t_data *data)
-{
-	int	i;
-
-	i = 0;
-	while (i < data->hauteur)
-	{
-		free (data->stock[i]);
-		i++;
-	}
-	free (data->stock);
-}
-
 void	put_image(void *txt, int i, int j, t_data *data)
 {
 	mlx_put_image_to_window(data->mlx, data->mlx_win, \
 		txt, j * 64, i * 64);
 }
 
-void	draw(t_data *data)
+void	draw(t_data *data, int i, int j)
 {
-	int	i;
-	int	j;
-
-	i = 0;
 	while (i < data->hauteur)
 	{
 		j = 0;
@@ -91,7 +74,7 @@ void	draw(t_data *data)
 					put_image(data->champignon, i, j, data);
 				else if (data->stock[i][j] == 'E')
 					put_image(data->door, i, j, data);
-				else if(data->stock[i][j] == 'I')
+				else if (data->stock[i][j] == 'I')
 					put_image(data->enemy, i, j, data);
 			}
 			j++;
@@ -119,9 +102,9 @@ void	open_window(t_data *data)
 		"bonus/image/enemy.xpm", &data->img_hauteur, &data->img_largeur);
 	if (!data->walls || !data->mario || !data->champignon || !data->door \
 		|| !data->empty)
-		{
-			ft_printf("Error\npicture problem");
-			exit(0);
-		}
-		draw(data);
+	{
+		ft_printf("Error\npicture problem");
+		exit(0);
+	}
+	draw(data, 0, 0);
 }

@@ -40,7 +40,7 @@ void	player_moves(t_data *data, int i, int j)
 				&& data->collectible != 0)
 			return ;
 		data->moves++;
-		data->stock[data->p_x +i][data->p_y + j] = 'P';
+		data->stock[data->p_x + i][data->p_y + j] = 'P';
 		data->stock[data->p_x][data->p_y] = '0';
 		data->p_x += i;
 		data->p_y += j;

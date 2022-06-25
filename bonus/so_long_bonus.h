@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 23:29:02 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/17 23:57:52 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/25 01:26:43 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int		check_ext(char *map);
 void	check_rectangle(t_data data);
 void	check_walls(t_data data);
 void	open_window(t_data *data);
-void	draw(t_data *data);
+void	draw(t_data *data, int i, int j);
 int		check_content(t_data *d, int i, int j);
 void	init(t_data *d);
 size_t	ft_strlen(char *s);
@@ -62,4 +62,5 @@ void	ft_free(t_data *data);
 int		destroy_window(t_data *data);
 int		key_hook(int key_code, t_data *data);
 void	mlx_function(t_data data);
+void	ft_exit(t_data *data, int i);
 #endif
