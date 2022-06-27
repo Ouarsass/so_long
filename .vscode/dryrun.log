@@ -1,7 +1,6 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory `/Users/mouarsas/Desktop/so_long'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/mouarsas/Desktop/so_long 2'
 cc -Wall -Wextra -Werror -c window.c -o window.o
- 
 cc -Wall -Wextra -Werror -c so_long.c -o so_long.o
 cc -Wall -Wextra -Werror -c play.c -o play.o
 cc -Wall -Wextra -Werror -c check_map.c -o check_map.o
@@ -15,5 +14,5 @@ cc -Wall -Wextra -Werror -c ft_printf/ft_putnbr_unsigned.c -o ft_printf/ft_putnb
 cc -Wall -Wextra -Werror -c ft_printf/ft_putnbr.c -o ft_printf/ft_putnbr.o
 cc -Wall -Wextra -Werror -c ft_printf/ft_putstr.c -o ft_printf/ft_putstr.o
 cc -Wall -Wextra -Werror -lmlx -framework OpenGL -framework AppKit window.o so_long.o play.o check_map.o get_next_line/get_next_line_utils.o get_next_line/get_next_line.o ft_printf/ft_hexa.o ft_printf/ft_pointer.o ft_printf/ft_printf.o ft_printf/ft_putchar.o ft_printf/ft_putnbr_unsigned.o ft_printf/ft_putnbr.o ft_printf/ft_putstr.o -o so_long
-make: Leaving directory `/Users/mouarsas/Desktop/so_long'
+make: Leaving directory `/Users/mouarsas/Desktop/so_long 2'
  

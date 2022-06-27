@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   play_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 18:34:08 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/17 23:30:48 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/25 19:07:54 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_exit(t_data *data, int i)
 	if (i == 0)
 		ft_printf("You win");
 	if (i == 1)
-		ft_printf("Game over");
+		ft_printf("you losed the game.");
 	free (data->stock);
 	mlx_destroy_window(data->mlx, data->mlx_win);
 	exit(0);
