@@ -6,7 +6,7 @@
 /*   By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 23:29:02 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/25 01:26:43 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/28 02:30:05 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ typedef struct s_data
 	int		img_largeur;
 	int		moves;
 	int		count;
+	void	*texture_black;
 }		t_data;
 
 int		check_ext(char *map);
@@ -63,4 +64,5 @@ int		destroy_window(t_data *data);
 int		key_hook(int key_code, t_data *data);
 void	mlx_function(t_data data);
 void	ft_exit(t_data *data, int i);
+void	show_moves(t_data *map);
 #endif

@@ -6,7 +6,7 @@
 /*   By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 18:21:07 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/25 02:54:08 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/28 02:27:19 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void	draw(t_data *data, int i, int j)
 		}
 		i++;
 	}
+	show_moves(data);
 }
 
 void	open_window(t_data *data)

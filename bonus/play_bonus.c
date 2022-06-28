@@ -6,12 +6,24 @@
 /*   By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 18:34:08 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/25 19:07:54 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/28 02:39:58 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long_bonus.h"
 #include "ft_printf/ft_printf.h"
+
+void	show_moves(t_data *map)
+{
+	char	str[10];
+
+	sprintf(str, "%d", map->moves);
+	map->texture_black = mlx_xpm_file_to_image(map->mlx, \
+	"bonus/image/black.xpm", &map->img_largeur, &map->img_hauteur);
+	mlx_put_image_to_window(map->mlx, map->mlx_win, \
+	map->texture_black, 0, 0);
+	mlx_string_put(map->mlx, map->mlx_win, 10, 10, 0x625B03, str);
+}
 
 int	destroy_window(t_data *data)
 {
