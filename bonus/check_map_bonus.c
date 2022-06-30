@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouarsas <mouarsas@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 23:48:45 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/17 23:48:43 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/06/30 21:28:54 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,16 @@ void	check_walls(t_data data)
 	while (i < data.larg)
 	{
 		if (data.stock[0][i] != '1' || data.stock[data.hauteur - 1][i] != '1')
+		{
+			ft_printf("Error\nproblem of the walls");
+			exit (1);
+		}
+		i++;
+	}
+	i = 0;
+	while (i < data.hauteur)
+	{
+		if (data.stock[i][0] != '1' || data.stock[i][data.larg - 1] != '1')
 		{
 			ft_printf("Error\nproblem of the walls");
 			exit (1);
