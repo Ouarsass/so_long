@@ -6,7 +6,7 @@
 /*   By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 18:20:28 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/29 21:58:38 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/07/01 00:14:05 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	check(int fd, t_data data, char **av, int i)
 {
 	char	*line;
 
-	data.hauteur = 0;
 	line = get_next_line(fd);
 	while (line)
 	{

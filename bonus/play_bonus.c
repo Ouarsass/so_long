@@ -6,7 +6,7 @@
 /*   By: mouarsas <mouarsas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 18:34:08 by mouarsas          #+#    #+#             */
-/*   Updated: 2022/06/29 21:55:31 by mouarsas         ###   ########.fr       */
+/*   Updated: 2022/07/01 00:51:17 by mouarsas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_exit(t_data *data, int i)
 	if (i == 0)
 		ft_printf("You win");
 	if (i == 1)
-		ft_printf("you losed the game.");
+		ft_printf("you lost the game.");
 	free (data->stock);
 	mlx_destroy_window(data->mlx, data->mlx_win);
 	exit(0);
