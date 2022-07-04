@@ -1,6 +1,5 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/mouarsas/Desktop/so_long 2'
- 
 cc -Wall -Wextra -Werror -c window.c -o window.o
 cc -Wall -Wextra -Werror -c so_long.c -o so_long.o
 cc -Wall -Wextra -Werror -c play.c -o play.o
